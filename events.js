@@ -19,9 +19,9 @@
    ===================================================================== */
 
 const EVENTS = [
-  {
-    date: "2026-10-17",
-    time: "10:00 - 12:00",
+ {
+    date: "2026-10-24",
+    time: "15:00 - 17:00",
     title: "Séance d'initiation",
     title_en: "Beginner session (séance d'initiation)",
     place: "Gymnase Pablo Picasso",
@@ -29,10 +29,10 @@ const EVENTS = [
     details_en: "Discover cricket with our coaches. No experience needed, equipment provided.",
     tag: "Initiation",
     tag_en: "Beginners"
-  },
-  {
+  }, 
+ /* {
     date: "2026-10-24",
-    time: "14:00 - 17:00",
+    time: "14:00 - 20:00",
     title: "Match amical en salle",
     title_en: "Indoor friendly match",
     place: "Gymnase Pablo Picasso",
@@ -40,10 +40,10 @@ const EVENTS = [
     details_en: "Club friendly match. Come and watch or ask to play.",
     tag: "Match",
     tag_en: "Match"
-  },
-  {
-    date: "2026-11-07",
-    time: "10:00 - 12:00",
+  }, */
+ /* {
+    date: "2026-10-24",
+    time: "14:00 - 20:00",
     title: "Entraînement jeunes et féminines",
     title_en: "Juniors and women's training",
     place: "Gymnase Pablo Picasso",
@@ -51,5 +51,16 @@ const EVENTS = [
     details_en: "A session for young players and women who want to learn the game.",
     tag: "Entraînement",
     tag_en: "Training"
-  }
+  }*/
+  {
+    date: "2026-10-24",
+    time: "14:00 - 20:00",
+    title: "Match d'entrainement ",
+    title_en: "Club Practice Match",
+    place: "Gymnase Pablo Picasso",
+    details: "Une séance d'entrainement pour les membres de club.",
+    details_en: "A session for club members.",
+    tag: "Entraînement",
+    tag_en: "Training"
+  }   
 ];
