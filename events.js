@@ -20,7 +20,7 @@
 
 const EVENTS = [
  {
-    date: "2026-10-24",
+    date: "2026-10-25",
     time: "15:00 - 17:00",
     title: "Séance d'initiation",
     title_en: "Beginner session (séance d'initiation)",
@@ -53,12 +53,12 @@ const EVENTS = [
     tag_en: "Training"
   }*/
   {
-    date: "2026-10-24",
+    date: "2026-10-25",
     time: "14:00 - 20:00",
-    title: "Match d'entrainement ",
+    title: "Match d'entraînement ",
     title_en: "Club Practice Match",
     place: "Gymnase Pablo Picasso",
-    details: "Une séance d'entrainement pour les membres de club.",
+    details: "Une séance d'entraînement pour les membres de club.",
     details_en: "A session for club members.",
     tag: "Entraînement",
     tag_en: "Training"
