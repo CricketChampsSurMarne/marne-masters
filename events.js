@@ -20,8 +20,8 @@
 
 const EVENTS = [
  {
-    date: "2026-10-25",
-    time: "15:00 - 17:00",
+    date: "tous les dimanches",
+    time: "15:00 - 16:00",
     title: "Séance d'initiation",
     title_en: "Beginner session (séance d'initiation)",
     place: "Gymnase Pablo Picasso",
@@ -30,7 +30,7 @@ const EVENTS = [
     tag: "Initiation",
     tag_en: "Beginners"
   }, 
- /* {
+/*{
     date: "2026-10-24",
     time: "14:00 - 20:00",
     title: "Match amical en salle",
@@ -40,7 +40,7 @@ const EVENTS = [
     details_en: "Club friendly match. Come and watch or ask to play.",
     tag: "Match",
     tag_en: "Match"
-  }, */
+  }*/, 
  /* {
     date: "2026-10-24",
     time: "14:00 - 20:00",
@@ -53,7 +53,7 @@ const EVENTS = [
     tag_en: "Training"
   }*/
   {
-    date: "2026-10-25",
+    date: "Tous les dimanches",
     time: "14:00 - 20:00",
     title: "Match d'entraînement ",
     title_en: "Club Practice Match",
