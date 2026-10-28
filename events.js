@@ -20,7 +20,7 @@
 
 const EVENTS = [
  {
-    date: "tous les dimanches",
+    date: "2026-11-01",
     time: "15:00 - 16:00",
     title: "Séance d'initiation",
     title_en: "Beginner session (séance d'initiation)",
@@ -53,7 +53,7 @@ const EVENTS = [
     tag_en: "Training"
   }*/
   {
-    date: "Tous les dimanches",
+    date: "2026-11-01",
     time: "14:00 - 20:00",
     title: "Match d'entraînement ",
     title_en: "Club Practice Match",
