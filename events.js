@@ -22,8 +22,8 @@ const EVENTS = [
  {
     date: "2026-11-08",
     time: "14:00 - 15:00",
-    title: "Séance d'initiation - Jeunes (moins de 14 ans)",
-    title_en: "Beginner session (séance d'initiation) - Children (below 14 years)",
+    title: "Séance d'initiation - Jeunes (moins de 14 ans) - GRATUIT",
+    title_en: "Beginner session (séance d'initiation) - Children (below 14 years) - Free",
     place: "Gymnase Pablo Picasso",
     details: "Découvrez le cricket avec nos entraîneurs. Aucune expérience requise, matériel fourni.",
     details_en: "Discover cricket with our coaches. No experience needed, equipment provided.",
