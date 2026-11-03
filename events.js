@@ -20,10 +20,10 @@
 
 const EVENTS = [
  {
-    date: "2026-11-01",
-    time: "15:00 - 16:00",
-    title: "Séance d'initiation",
-    title_en: "Beginner session (séance d'initiation)",
+    date: "2026-11-08",
+    time: "14:00 - 15:00",
+    title: "Séance d'initiation - Jeunes (moins de 14 ans)",
+    title_en: "Beginner session (séance d'initiation) - Children (below 14 years)",
     place: "Gymnase Pablo Picasso",
     details: "Découvrez le cricket avec nos entraîneurs. Aucune expérience requise, matériel fourni.",
     details_en: "Discover cricket with our coaches. No experience needed, equipment provided.",
@@ -53,14 +53,14 @@ const EVENTS = [
     tag_en: "Training"
   }*/
   {
-    date: "2026-11-01",
-    time: "14:00 - 20:00",
-    title: "Match d'entraînement ",
-    title_en: "Club Practice Match",
+    date: "2026-11-08",
+    time: "15:00 - 20:00",
+    title: "Tournoi des clubs ",
+    title_en: "Club Tournament",
     place: "Gymnase Pablo Picasso",
-    details: "Une séance d'entraînement pour les membres de club.",
-    details_en: "A session for club members.",
-    tag: "Entraînement",
-    tag_en: "Training"
+    details: "Match pour les membres de club.",
+    details_en: "Match for club members.",
+    tag: "Match",
+    tag_en: "Match"
   }   
 ];
