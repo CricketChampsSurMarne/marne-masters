@@ -58,8 +58,8 @@ const EVENTS = [
     title: "Tournoi des clubs ",
     title_en: "Club Tournament",
     place: "Gymnase Pablo Picasso",
-    details: "Match pour les membres de club.",
-    details_en: "Match for club members.",
+    details: "Match pour les membres de club.Entrée gratuite pour assister au match!!!",
+    details_en: "Match for club members.Entry free to watch the match!!!",
     tag: "Match",
     tag_en: "Match"
   }   
