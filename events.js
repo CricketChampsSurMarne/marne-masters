@@ -20,7 +20,7 @@
 
 const EVENTS = [
  {
-    date: "2026-11-08",
+    date: "2026-11-15",
     time: "14:00 - 15:00",
     title: "Séance d'initiation - Jeunes (moins de 14 ans) - GRATUIT",
     title_en: "Beginner session (séance d'initiation) - Children (below 14 years) - Free",
@@ -53,10 +53,10 @@ const EVENTS = [
     tag_en: "Training"
   }*/
   {
-    date: "2026-11-08",
+    date: "2026-11-15",
     time: "15:00 - 20:00",
-    title: "Tournoi des clubs ",
-    title_en: "Club Tournament",
+    title: "Entraînement et Match",
+    title_en: "Training and Match",
     place: "Gymnase Pablo Picasso",
     details: "Match pour les membres de club.Entrée gratuite pour assister au match!!!",
     details_en: "Match for club members.Entry free to watch the match!!!",
