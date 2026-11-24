@@ -20,7 +20,7 @@
 
 const EVENTS = [
  {
-    date: "2026-11-15",
+    date: "2026-11-29",
     time: "14:00 - 15:00",
     title: "Séance d'initiation - Jeunes (moins de 14 ans) - GRATUIT",
     title_en: "Beginner session (séance d'initiation) - Children (below 14 years) - Free",
@@ -53,7 +53,7 @@ const EVENTS = [
     tag_en: "Training"
   }*/
   {
-    date: "2026-11-15",
+    date: "2026-11-29",
     time: "15:00 - 20:00",
     title: "Entraînement et Match",
     title_en: "Training and Match",
