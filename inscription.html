@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inscription et paiements | Marne Masters Club de Cricket</title>
+<meta name="description" content="Adhésion 2026-2027, soutien au club et frais de match du Marne Masters Club de Cricket. Paiement sécurisé via HelloAsso.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---------- Page header ---------- */
+.page-hero{color:#fff;background:repeating-linear-gradient(90deg,var(--pitch) 0 90px,#11873F 90px 180px)}
+.page-hero .wrap{padding:clamp(44px,7vw,80px) 0;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.page-hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800;letter-spacing:-.03em;line-height:1}
+.page-hero h1 span{color:var(--sun)}
+.page-hero p{margin-top:16px;font-size:1.15rem;max-width:52ch;opacity:.95}
+.page-hero img{width:clamp(110px,16vw,180px);filter:drop-shadow(0 10px 18px rgba(0,0,0,.3))}
+.secure{display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:rgba(0,0,0,.18);padding:8px 14px;border-radius:999px;font-weight:600;font-size:.95rem}
+.secure svg{width:18px;height:18px}
+@media (max-width:640px){.page-hero .wrap{grid-template-columns:1fr}.page-hero img{display:none}}
+
+/* ---------- Choice cards (tabs) ---------- */
+.choose{padding:clamp(48px,7vw,80px) 0 24px}
+.choose h2{font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:24px}
+.options{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.opt{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:var(--radius-lg);background:var(--paper);border:2px solid var(--line);transition:border-color .15s,transform .15s;position:relative}
+.opt:hover{transform:translateY(-3px);border-color:var(--ink)}
+.opt:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.opt[aria-selected="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.opt[aria-selected="true"]::after{content:"";position:absolute;left:50%;bottom:-13px;width:20px;height:20px;background:var(--paper);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
+.opt .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center}
+.opt .ico svg{width:26px;height:26px}
+.opt strong{font-family:"Bricolage Grotesque",sans-serif;font-size:1.25rem;line-height:1.15;color:var(--ink)}
+.opt span.d{color:var(--muted);font-size:.95rem;line-height:1.45}
+.opt .pill{align-self:flex-start;font-size:.78rem;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--mist);color:var(--ink)}
+@media (max-width:1000px){.options{grid-template-columns:repeat(2,1fr)}.opt[aria-selected="true"]::after{display:none}}
+@media (max-width:520px){.options{grid-template-columns:1fr}}
+
+/* ---------- Payment panel ---------- */
+.pay{padding:24px 0 clamp(64px,9vw,100px)}
+.panel{border:2px solid var(--ink);border-radius:var(--radius-lg);overflow:hidden;background:var(--paper)}
+.panel-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;padding:24px 28px;background:var(--navy);color:#fff}
+.panel-head h2{font-size:clamp(1.4rem,3vw,2rem);color:#fff}
+.panel-head p{opacity:.9;margin-top:4px}
+.panel-head a{color:var(--sun);font-weight:700;white-space:nowrap}
+.ha-wrap{background:#fff;padding:8px clamp(0px,2vw,24px)}
+.ha-wrap iframe{display:block;width:100%;height:750px;border:0}
+.ha-wrap iframe[hidden]{display:none}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.note-card{background:var(--mist);border-radius:var(--radius-lg);padding:22px 24px}
+.note-card h3{font-size:1.1rem;margin-bottom:6px}
+.note-card p{color:var(--muted);font-size:.98rem}
+.note-card a{color:var(--pitch);font-weight:700}
+@media (max-width:900px){.notes{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="tricolore" aria-hidden="true"></div>
+<header class="top">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="">
+      <span>Marne Masters<small>Club de Cricket</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="links" data-i18n="menu">Menu</button>
+    <div class="links" id="links">
+      <a href="index.html#about" data-i18n="nav_about">Le club</a>
+      <a href="index.html#events" data-i18n="nav_events">Événements</a>
+      <a href="index.html#juniors" data-i18n="nav_juniors">Jeunes</a>
+      <a href="index.html#where" data-i18n="nav_where">Où jouer</a>
+      <a href="index.html#sponsors" data-i18n="nav_sponsors">Partenaires</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+      <a href="inscription.html" class="cta" aria-current="page" data-i18n="nav_join">Inscription</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+        <button type="button" data-lang="fr" aria-pressed="true" lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="wrap">
+      <div>
+        <h1 data-i18n-html="ph_title">Inscription <span>&amp; paiements</span></h1>
+        <p data-i18n="ph_sub">Adhésion pour la saison 2026-2027, soutien au club et frais de match : tout se règle en ligne, en quelques minutes.</p>
+        <span class="secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span data-i18n="ph_secure">Paiement sécurisé via HelloAsso</span></span>
+      </div>
+      <img src="logo.png" alt="">
+    </div>
+  </div>
+
+  <section class="choose" aria-labelledby="choose-title">
+    <div class="wrap">
+      <h2 id="choose-title" data-i18n="ch_title">Que souhaitez-vous régler ?</h2>
+      <div class="options" role="tablist" aria-label="Payments">
+        <button class="opt" role="tab" id="tab-adulte" aria-controls="panel" data-key="adulte">
+          <span class="ico" style="background:#E2F3E8" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0E7A3D" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="7" r="3.5"/><path d="M5 21c0-4 3.1-7 7-7s7 3 7 7"/></svg></span>
+          <strong data-i18n="o1_t">Adhésion adulte</strong>
+          <span class="d" data-i18n="o1_d">Cotisation au club pour la saison 2026-2027.</span>
+          <span class="pill" data-i18n="o1_p">14 ans et plus</span>
+        </button>
+        <button class="opt" role="tab" id="tab-enfant" aria-controls="panel" data-key="enfant">
+          <span class="ico" style="background:#FFF3D1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#B07A00" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="3"/><path d="M7 21c0-3.2 2.2-5.5 5-5.5s5 2.3 5 5.5"/><path d="M4 5l2 2M20 5l-2 2"/></svg></span>
+          <strong data-i18n="o2_t">Adhésion enfant</strong>
+          <span class="d" data-i18n="o2_d">Pour les jeunes joueurs, saison 2026-2027.</span>
+          <span class="pill" data-i18n="o2_p">Moins de 14 ans</span>
+        </button>
+        <button class="opt" role="tab" id="tab-soutien" aria-controls="panel" data-key="soutien">
+          <span class="ico" style="background:#FCE4E7" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#D7263D" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s-8-4.6-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.4-8 11-8 11z"/></svg></span>
+          <strong data-i18n="o3_t">Soutenez votre équipe</strong>
+          <span class="d" data-i18n="o3_d">Un soutien financier pour aider le club à grandir.</span>
+          <span class="pill" data-i18n="o3_p">Don</span>
+        </button>
+        <button class="opt" role="tab" id="tab-match" aria-controls="panel" data-key="match">
+          <span class="ico" style="background:#E3E7F7" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#1B2A6B" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M8.5 5.5Q12 12 8.5 18.5M15.5 5.5Q12 12 15.5 18.5"/></svg></span>
+          <strong data-i18n="o4_t">Frais de match et divers</strong>
+          <span class="d" data-i18n="o4_d">Matchs en salle et en extérieur, et autres paiements du club.</span>
+          <span class="pill" data-i18n="o4_p">Salle et extérieur</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="pay">
+    <div class="wrap">
+      <div class="panel" id="panel" role="tabpanel" aria-live="polite">
+        <div class="panel-head">
+          <div>
+            <h2 id="panel-title"></h2>
+            <p id="panel-sub"></p>
+          </div>
+          <a id="panel-link" target="_blank" rel="noopener" data-i18n="open_ha">Ouvrir sur HelloAsso</a>
+        </div>
+        <div class="ha-wrap" id="ha-wrap"></div>
+      </div>
+
+      <div class="notes">
+        <div class="note-card">
+          <h3 data-i18n="n1_t">Contribution HelloAsso</h3>
+          <p data-i18n="n1_d">HelloAsso est gratuit pour le club. À la fin du paiement, une contribution volontaire à HelloAsso vous est proposée : elle est facultative et vous pouvez la modifier ou la mettre à 0 €.</p>
+        </div>
+        <div class="note-card">
+          <h3 data-i18n="n2_t">Juniors : deux étapes</h3>
+          <p data-i18n-html="n2_d">Réglez l’adhésion enfant ici, puis remplissez le <a href="index.html#juniors">formulaire d’inscription aux entraînements du dimanche</a>.</p>
+        </div>
+        <div class="note-card">
+          <h3 data-i18n="n3_t">Une question ?</h3>
+          <p data-i18n-html="n3_d">Écrivez-nous via le <a href="index.html#contact">formulaire de contact</a> ou sur <a href="https://wa.me/33768768808" target="_blank" rel="noopener">WhatsApp</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="">
+      <span>Marne Masters<small>Club de Cricket</small></span>
+    </a>
+    <p class="foot-sponsor"><span data-i18n="sp_main">Sponsor principal</span> : <a href="https://www.fdcc.fr" target="_blank" rel="noopener">FDCC</a></p>
+    <p>One ball at a time, One Match at a time. &copy; <span id="year"></span></p>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   HELLOASSO FORMS — to change a form, replace its address below.
+   (Paste the address that ends in /widget from HelloAsso's "Intégrer" code.)
+   ===================================================================== */
+const HA = {
+  adulte:  "https://www.helloasso.com/associations/marne-masters-club-de-cricket/adhesions/adhesion-2026-2027-mmcc/widget",
+  enfant:  "https://www.helloasso.com/associations/marne-masters-club-de-cricket/adhesions/adhesion-2026-2027-cricket-enfant/widget",
+  soutien: "https://www.helloasso.com/associations/marne-masters-club-de-cricket/paiements/soutenez-votre-equipe/widget",
+  match:   "https://www.helloasso.com/associations/marne-masters-club-de-cricket/paiements/club-match-fee-indoor-and-outdoor/widget"
+};
+
+const T = {
+  fr:{
+    menu:"Menu",nav_about:"Le club",nav_events:"Événements",nav_juniors:"Jeunes",nav_where:"Où jouer",nav_sponsors:"Partenaires",nav_contact:"Contact",nav_join:"Inscription",
+    ph_title:'Inscription <span>&amp; paiements</span>',
+    ph_sub:"Adhésion pour la saison 2026-2027, soutien au club et frais de match : tout se règle en ligne, en quelques minutes.",
+    ph_secure:"Paiement sécurisé via HelloAsso",
+    ch_title:"Que souhaitez-vous régler ?",
+    o1_t:"Adhésion adulte",o1_d:"Cotisation au club pour la saison 2026-2027.",o1_p:"14 ans et plus",
+    o2_t:"Adhésion enfant",o2_d:"Pour les jeunes joueurs, saison 2026-2027.",o2_p:"Moins de 14 ans",
+    o3_t:"Soutenez votre équipe",o3_d:"Un soutien financier pour aider le club à grandir.",o3_p:"Don",
+    o4_t:"Frais de match et divers",o4_d:"Matchs en salle et en extérieur, et autres paiements du club.",o4_p:"Salle et extérieur",
+    p_adulte:"Adhésion adulte 2026-2027",s_adulte:"Pour les joueurs de 14 ans et plus.",
+    p_enfant:"Adhésion enfant 2026-2027",s_enfant:"Pour les enfants de moins de 14 ans. Le formulaire est rempli par un parent.",
+    p_soutien:"Soutenez votre équipe",s_soutien:"Chaque contribution aide à développer le cricket à Marne Masters. Merci !",
+    p_match:"Frais de match et paiements divers",s_match:"Matchs en salle et en extérieur, et autres paiements demandés par le club.",
+    open_ha:"Ouvrir sur HelloAsso",
+    n1_t:"Contribution HelloAsso",n1_d:"HelloAsso est gratuit pour le club. À la fin du paiement, une contribution volontaire à HelloAsso vous est proposée : elle est facultative et vous pouvez la modifier ou la mettre à 0 €.",
+    n2_t:"Juniors : deux étapes",n2_d:'Réglez l’adhésion enfant ici, puis remplissez le <a href="index.html#juniors">formulaire d’inscription aux entraînements du dimanche</a>.',
+    n3_t:"Une question ?",n3_d:'Écrivez-nous via le <a href="index.html#contact">formulaire de contact</a> ou sur <a href="https://wa.me/33768768808" target="_blank" rel="noopener">WhatsApp</a>.',
+    sp_main:"Sponsor principal"
+  },
+  en:{
+    menu:"Menu",nav_about:"The club",nav_events:"Events",nav_juniors:"Juniors",nav_where:"Where we play",nav_sponsors:"Sponsors",nav_contact:"Contact",nav_join:"Register",
+    ph_title:'Registration <span>&amp; payments</span>',
+    ph_sub:"Membership for the 2026-2027 season, club support and match fees: everything is paid online in a few minutes.",
+    ph_secure:"Secure payment with HelloAsso",
+    ch_title:"What would you like to pay for?",
+    o1_t:"Adult membership",o1_d:"Club membership fee for the 2026-2027 season.",o1_p:"Age 14 and over",
+    o2_t:"Child membership",o2_d:"For young players, 2026-2027 season.",o2_p:"Under 14",
+    o3_t:"Support your team",o3_d:"Financial support to help the club grow.",o3_p:"Donation",
+    o4_t:"Match fees and other payments",o4_d:"Indoor and outdoor matches, and other club payments.",o4_p:"Indoor and outdoor",
+    p_adulte:"Adult membership 2026-2027",s_adulte:"For players aged 14 and over.",
+    p_enfant:"Child membership 2026-2027",s_enfant:"For children under 14. The form is filled in by a parent.",
+    p_soutien:"Support your team",s_soutien:"Every contribution helps grow cricket at Marne Masters. Thank you!",
+    p_match:"Match fees and other payments",s_match:"Indoor and outdoor matches, and other payments requested by the club.",
+    open_ha:"Open on HelloAsso",
+    n1_t:"HelloAsso contribution",n1_d:"HelloAsso is free for the club. At the end of the payment, HelloAsso suggests a voluntary contribution to its platform: it is optional and you can change it or set it to €0.",
+    n2_t:"Juniors: two steps",n2_d:'Pay the child membership here, then fill in the <a href="index.html#juniors">Sunday training registration form</a>.',
+    n3_t:"Any questions?",n3_d:'Write to us using the <a href="index.html#contact">contact form</a> or on <a href="https://wa.me/33768768808" target="_blank" rel="noopener">WhatsApp</a>.',
+    sp_main:"Main sponsor"
+  }
+};
+
+let lang = "fr";
+try { lang = localStorage.getItem("mm-lang") || "fr"; } catch(e){}
+let current = "adulte";
+const frames = {};
+
+function show(key, updateHash){
+  if (!HA[key]) key = "adulte";
+  current = key;
+  document.querySelectorAll(".opt").forEach(b => {
+    const on = b.dataset.key === key;
+    b.setAttribute("aria-selected", on); b.tabIndex = on ? 0 : -1;
+  });
+  document.getElementById("panel").setAttribute("aria-labelledby", "tab-" + key);
+  const wrap = document.getElementById("ha-wrap");
+  Object.values(frames).forEach(f => f.hidden = true);
+  if (!frames[key]){                       // load each HelloAsso form only the first time it is opened
+    const f = document.createElement("iframe");
+    f.className = "ha";
+    f.src = HA[key];
+    f.title = "HelloAsso";
+    f.setAttribute("allow", "payment 'self' https://paymenthub.helloassopay.com https://helloasso.com");
+    f.setAttribute("allowtransparency", "true");
+    f.setAttribute("scrolling", "auto");
+    wrap.appendChild(f); frames[key] = f;
+  }
+  frames[key].hidden = false;
+  document.getElementById("panel-link").href = HA[key].replace(/\/widget$/, "");
+  texts();
+  if (updateHash) history.replaceState(null, "", "#" + key);
+}
+function texts(){
+  document.getElementById("panel-title").textContent = T[lang]["p_" + current];
+  document.getElementById("panel-sub").textContent = T[lang]["s_" + current];
+}
+function setLang(l){
+  lang = l; document.documentElement.lang = l;
+  try { localStorage.setItem("mm-lang", l); } catch(e){}
+  document.querySelectorAll("[data-i18n]").forEach(el => { const v = T[l][el.dataset.i18n]; if (v) el.textContent = v; });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => { el.innerHTML = T[l][el.dataset.i18nHtml]; });
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
+  document.title = (l === "fr" ? "Inscription et paiements" : "Registration and payments") + " | Marne Masters Club de Cricket";
+  texts();
+}
+
+/* HelloAsso tells the page how tall its form is: resize the matching frame */
+window.addEventListener("message", e => {
+  if (!e.data || !e.data.height) return;
+  Object.values(frames).forEach(f => { if (e.source === f.contentWindow) f.style.height = e.data.height + "px"; });
+});
+
+document.querySelectorAll(".opt").forEach(b => b.addEventListener("click", () => {
+  show(b.dataset.key, true);
+  if (matchMedia("(max-width:1000px)").matches) document.getElementById("panel").scrollIntoView({behavior:"smooth", block:"start"});
+}));
+document.querySelector(".options").addEventListener("keydown", e => {
+  const keys = Object.keys(HA); let i = keys.indexOf(current);
+  if (e.key === "ArrowRight" || e.key === "ArrowDown") i = (i + 1) % keys.length;
+  else if (e.key === "ArrowLeft" || e.key === "ArrowUp") i = (i - 1 + keys.length) % keys.length;
+  else return;
+  e.preventDefault(); show(keys[i], true); document.getElementById("tab-" + keys[i]).focus();
+});
+window.addEventListener("hashchange", () => show(location.hash.slice(1), false));
+
+const menuBtn = document.querySelector(".menu-btn"), links = document.getElementById("links");
+menuBtn.addEventListener("click", () => { const o = links.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", o); });
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+document.getElementById("year").textContent = new Date().getFullYear();
+
+show(location.hash.slice(1) || "adulte", false);
+setLang(lang);
+</script>
+</body>
+</html>
